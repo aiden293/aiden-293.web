@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dunan's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>설효림의 미니홈피</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Dunan</h1>
-            <div class="section">
-                <h2> I am SangHyup Lee.</h2>    
-            </div>
-        <nav>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <!-- 이름 & Contact 아래 구분선 -->
-    <div class="divider"></div>
+  <!-- 🔔 상단 인사 문구 -->
+  <header>
+    <h1>🌸 설효림의 미니홈에 오신 걸 환영해요 🌸</h1>
+    <p class="subtitle">"오늘도 그대와의 추억 속에 살아요..."</p>
+  </header>
 
-    <!-- 2줄 배치 레이아웃 -->
-    <div class="container">
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I'm a CS & Economics student passionate about Product Management, Data Analytics, and Game Development.</p>
-        </div>
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Email: your_email@example.com <br> GitHub: github.com/yourusername</p>
-        </div>
+  <!-- 🖼️ 왼쪽: 캐릭터 이미지 -->
+  <div class="container">
+    <div class="left-panel">
+      <img src="couple.png" alt="커플 일러스트">
+      <p>💬 얼빵이의 한마디: <em>“오늘은 자림이 보고 싶다...”</em></p>
     </div>
 
-    <div class="container">
-        <div class="section">
-            <h2>Hobbies & Interests</h2>
-            <p>Gaming, Reading Economic Books, Analyzing Market Trends, Web Development</p>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <p>Python, Java, SQL, Data Analysis, Product Management</p>
-        </div>
-    </div>
+    <!-- 📜 오른쪽: 음악 플레이어 및 메시지 -->
+    <div class="right-panel">
+      <div id="now-playing">🎵 지금 재생 중: </div>
+      <audio id="player" controls></audio>
 
-    <footer>
-        <p>© 2025 Dunan</p>
-    </footer>
+      <div class="message-box">
+        <p>너랑 걷던 그 골목, 아직도 그대로야.</p>
+        <p>나만 멈춰있는 걸까...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript 로직 연결 -->
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

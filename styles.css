@@ -1,94 +1,69 @@
-/* 기본 설정: 기본 margin/padding 제거 */
-* {
+/* 전체 배경 */
+body {
+    background: linear-gradient(#ffdede, #fff1f1);
+    font-family: 'Nanum Pen Script', cursive;
+    color: #5a3e36;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* 전체 높이 & 스크롤 방지 */
-html, body {
-    height: 100vh;
-    overflow: hidden; /* 하단 바 제거 */
-}
-
-/* 배경 설정 */
-body {
-    background: linear-gradient(to bottom, #4675bd, #000000); /* 파란색 → 검은색 그라데이션 */
-    color: #ccb950; /* 금색 텍스트 */
-    font-family: 'Inter', sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px;
+  }
+  
+  /* 상단 인사 */
+  header {
     text-align: center;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #FFD700;
-}
-
-/* 내비게이션 */
-nav {
-    margin-bottom: 20px;
-}
-
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #66FCF1;
-    font-weight: 500;
-}
-
-/* 줄 스타일 */
-.divider {
-    width: 80%;
-    height: 2px;
-    background-color: #FFD700; /* 금색 줄 */
-    margin: 30px auto;
-}
-
-/* 2줄 배치 레이아웃 */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
-}
-
-/* 개별 섹션 스타일 */
-.section {
-    width: 90%;
-    text-align: center;
+    padding: 20px;
+    background-color: #fff8f8;
+    border-bottom: 2px dashed #f4c2c2;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #a67676;
+  }
+  
+  /* 본문 양쪽 배치 */
+  .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0; /* 위아래 간격 */
-    padding: 20px 0; /* 내부 패딩 추가 */
-}
+    padding: 40px;
+    justify-content: space-around;
+  }
+  
+  /* 왼쪽 패널 */
+  .left-panel {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .left-panel img {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+  }
+  
+  /* 오른쪽 패널 */
+  .right-panel {
+    width: 50%;
+  }
+  
+  #now-playing {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .message-box {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border: 2px dashed #ffa0a0;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
 
-/* 섹션 제목 위에 줄 추가 (첫 번째, 두 번째 섹션 제외) */
-.section:not(:nth-child(1)):not(:nth-child(2))::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #FFD700;
-    margin-bottom: 15px auto;   
-}
-
-/* 반응형 (작은 화면에서는 한 줄로 변경) */
-@media screen and (max-width: 800px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-}
+  
+  
