@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>이상협의 미니홈피</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>393.Net</h1>
+            <div class="section">
+                <h2>I am SangHyup Lee</h2>
+            </div>
+        <nav>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <!-- 🔔 상단 인사 문구 -->
-  <header>
-    <h1> Welcome To my website </h1>
-    <h2> 이상협의 미니홈피에 오신 걸 환영합니다 </h2>
-    <p class="subtitle">"오늘도 그대와의 추억 속에 살아요..."</p>
-  </header>
+    <!-- 이름 & Contact 아래 구분선 -->
+    <div class="divider"></div>
 
-  <!-- 🖼️ 왼쪽: 캐릭터 이미지 -->
-  <div class="container">
-    <div class="left-panel">
-      <img src="couple.png" alt="일러스트">
-      <p>💬 오늘의 한마디: <em>“인생은 술”</em></p>
+    <!-- 2줄 배치 레이아웃 -->
+    <div class="container">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I'm a CS & Economics student passionate about Product Management, Data Analytics, and Game Development.</p>
+        </div>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: your_email@example.com <br> GitHub: github.com/yourusername</p>
+        </div>
     </div>
 
-    <!-- 📜 오른쪽: 음악 플레이어 및 메시지 -->
-    <div class="right-panel">
-      <div id="now-playing">🎵 지금 재생 중: </div>
-      <audio id="player" controls></audio>
-
-      <div class="message-box">
-        <p> N/A </p>
-        <p> 코딩 싫어 응애 </p>
-      </div>
+    <div class="container">
+        <div class="section">
+            <h2>Hobbies & Interests</h2>
+            <p>Gaming, Reading Economic Books, Analyzing Market Trends, Web Development</p>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <p>Python, Java, SQL, Data Analysis, Product Management</p>
+        </div>
     </div>
-  </div>
 
-  <!-- JavaScript 로직 연결 -->
-  <script src="script.js"></script>
+    <footer>
+        <p>© 2025 Dunan</p>
+    </footer>
 </body>
 </html>
-
-
-
-
