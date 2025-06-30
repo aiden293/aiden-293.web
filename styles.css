@@ -1,93 +1,147 @@
-/* 기본 설정: 기본 margin/padding 제거 */
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 전체 높이 & 스크롤 방지 */
-html, body {
-    height: 100vh;
-    overflow: hidden; /* 하단 바 제거 */
-}
-
-/* 배경 설정 */
 body {
-    background: linear-gradient(to bottom, #4675bd, #000000); /* 파란색 → 검은색 그라데이션 */
-    color: #ccb950; /* 금색 텍스트 */
-    font-family: 'Inter', sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px;
-    text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #4675bd, #000000);
+  color: #ccb950;
+  font-family: 'Inter', 'Pretendard', sans-serif;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
+.flex-container {
+  display: flex;
+  max-width: 1050px;
+  margin: 60px auto 0 auto;
+  background: rgba(30,30,40,0.85);
+  border-radius: 22px;
+  box-shadow: 0 8px 36px 0 rgba(0,0,0,0.18);
+  overflow: hidden;
+  align-items: stretch;
 }
 
-h1 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #FFD700;
+/* 왼쪽 프로필 */
+.profile {
+  flex: 1.12;
+  background: none;
+  padding: 44px 34px 44px 44px;
+  border-right: 2px solid #FFD700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.profile h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.18;
+  color: #FFD700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.profile .subdomain {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #66FCF1;
+}
+.profile .subtitle {
+  font-size: 1.07rem;
+  color: #b5d0fa;
+  margin-bottom: 22px;
+  margin-top: 3px;
+  text-align: center;
 }
 
-/* 내비게이션 */
-nav {
-    margin-bottom: 20px;
+.profile nav {
+  margin: 16px 0 2px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
-
-nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #66FCF1;
-    font-weight: 500;
+.profile nav a {
+  color: #66FCF1;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.18s;
 }
+.profile nav a:hover { color: #FFD700; }
 
-/* 줄 스타일 */
 .divider {
-    width: 80%;
-    height: 2px;
-    background-color: #FFD700; /* 금색 줄 */
-    margin: 30px auto;
+  width: 60%;
+  height: 2px;
+  background: #FFD700;
+  margin-top: 38px;
+  margin-bottom: 2px;
 }
 
-/* 2줄 배치 레이아웃 */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
+/* 오른쪽: 2x2 그리드 */
+.details-grid {
+  flex: 2;
+  padding: 48px 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 36px 30px;
+  align-items: stretch;
 }
 
-/* 개별 섹션 스타일 */
 .section {
-    width: 90%;
-    text-align: center;
-    display: flex;
+  background: rgba(0,0,0,0.03);
+  border-radius: 17px;
+  padding: 28px 20px 18px 20px;
+  box-shadow: 0 2px 8px rgba(20,20,20,0.07);
+  min-width: 180px;
+  min-height: 155px;
+  display: flex;
+  flex-direction: column;
+}
+.section h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section ul {
+  text-align: left;
+  list-style: disc inside;
+  font-size: 1.02rem;
+  color: #ececec;
+  margin-left: 4px;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #ffe9a9;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 900px) {
+  .flex-container {
     flex-direction: column;
+    border-radius: 0;
+  }
+  .profile {
+    border-right: none;
+    border-bottom: 2px solid #FFD700;
     align-items: center;
-    margin: 30px 0; /* 위아래 간격 */
-    padding: 20px 0; /* 내부 패딩 추가 */
+    padding: 32px 10px;
+  }
+  .details-grid {
+    padding: 28px 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 22px 0;
+  }
 }
 
-/* 섹션 제목 위에 줄 추가 (첫 번째, 두 번째 섹션 제외) */
-.section:not(:nth-child(1)):not(:nth-child(2))::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #FFD700;
-    margin-bottom: 15px auto;
-}
-
-@media screen and (max-width: 800px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-}

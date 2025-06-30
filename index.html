@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dunan's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aiden:239.web</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>393.Net</h1>
-            <div class="section">
-                <h2>I am SangHyup Lee</h2>
-            </div>
-        <nav>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <main class="flex-container">
+    <!-- 왼쪽: 자기소개/링크 -->
+    <section class="profile">
+      <h1>aiden:239.web<br><span class="subdomain">SangHyup Lee</span></h1>
+      <div class="subtitle">CS & Economics @ BU</div>
+      <nav>
+        <a href="projects.html"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+        <a href="mailto:aidenshlee393@gmail.com"><i class="fa-solid fa-envelope"></i> Contact</a>
+        <a href="https://github.com/SangHLee0921" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </nav>
+      <div class="divider"></div>
+    </section>
 
-    <!-- 이름 & Contact 아래 구분선 -->
-    <div class="divider"></div>
-
-    <!-- 2줄 배치 레이아웃 -->
-    <div class="container">
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I'm a CS & Economics student passionate about Product Management, Data Analytics, and Game Development.</p>
-        </div>
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Email: your_email@example.com <br> GitHub: github.com/yourusername</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="section">
-            <h2>Hobbies & Interests</h2>
-            <p>Gaming, Reading Economic Books, Analyzing Market Trends, Web Development</p>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <p>Python, Java, SQL, Data Analysis, Product Management</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 Dunan</p>
-    </footer>
+    <!-- 오른쪽: 2x2 그리드 -->
+    <section class="details-grid">
+      <div class="section">
+        <h2><i class="fa-solid fa-code"></i> I Do</h2>
+        <ul>
+          <li>Data Analysis</li>
+          <li>Fullstack Web Development</li>
+          <li>Product Management</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2><i class="fa-solid fa-star"></i> Interests</h2>
+        <ul>
+          <li>Game Design</li>
+          <li>Game Development</li>
+          <li>Market Analysis</li>
+          <li>Web Development</li>
+          <li>Data Analysis</li>
+          <li>Data Science</li>
+          <li>Project Management</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2><i class="fa-solid fa-wrench"></i> Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>Frontend Development</li>
+          <li>SQL</li>
+          <li>Unity</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2><i class="fa-solid fa-book"></i> On Going Projects</h2>
+        <ul>
+          <li>Project.GG(Game Tracking)</li>
+          <li>Project.Webzine</li>
+          <li>ProjectHM.(2D-Game)</li>
+          <!-- 필요하면 프로젝트 더 추가 가능 -->
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 SangHyup Lee</p>
+  </footer>
 </body>
 </html>
